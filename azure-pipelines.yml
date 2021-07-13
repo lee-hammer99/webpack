@@ -39,7 +39,7 @@ jobs:
       - script: yarn link webpack --frozen-lockfile
         displayName: "Link webpack into node_modules"
       - script: |
-          yarn cover:integration --ci --maxWorkers=2 --reporters=default --reporters=jest-junit
+          yarn cover:integration --ci --maxWorkers=2 ConfigCacheTestCases --reporters=default --reporters=jest-junit
           yarn cover:merge
         env:
           CI: "true"
